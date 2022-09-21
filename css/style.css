@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-fundo: #23232e;
+    --cor-primaria: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Arial, Helvetica, sans-serif;
+    background: #23232e;
+    height: 8vh;
+}
+
+main {
+    background: url(../images/img.jpg) center;
+    background-size: cover;
+}
+
+.nav-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-list ul {
+    background-color: var(--cor-fundo);
+}
+
+.nav-list ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav-list ul li a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.dp-menu ul li a:hover {
+    opacity: 0.7;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: .3s;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform .3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.t-principal {
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    padding: 20px;
+}
+
+.t-sub {
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.p-principal {
+    padding: 20px;
+    margin: 0 40px;
+    font-size: 15px;
+    color: rgb(185, 185, 185);
+}
+
+.imagem {
+    display: flex;
+    width: 28%;
+    margin: 0 20px;
+    border-radius: 20px;
+}
+
+h3 {
+    font-size: 30px;
+    color: #fff;
+    padding: 15px;
+}
+
+.inauguracao {
+    display: flex;
+}
+
+.flex {
+    list-style: none;
+}
+
+.flex li {
+    font-size: 17px;
+    color: rgb(185, 185, 185);
+}
